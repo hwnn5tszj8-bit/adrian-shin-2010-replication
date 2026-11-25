@@ -1,0 +1,9 @@
+Model,Term,Estimate,Std_Error_HAC,t_stat,p_value,R_squared,N
+Households (1963-2006),(Intercept),0.279,0.03,9.37,0,0.497,176
+Households (1963-2006),d_hh_assets,-0.121,0.013,-9.36,0,0.497,176
+Commercial Banks (1963-2006),(Intercept),-0.874,0.928,-0.94,0.3474,0.008,176
+Commercial Banks (1963-2006),d_cb_assets,0.343,0.435,0.79,0.4311,0.008,176
+Broker-Dealers (1963-2006),(Intercept),-3.07,0.555,-5.53,0,0.809,176
+Broker-Dealers (1963-2006),d_bd_assets,0.893,0.047,18.93,0,0.809,176
+Broker-Dealers (2009-Present),(Intercept),-1.447,0.416,-3.48,9e-4,0.397,70
+Broker-Dealers (2009-Present),d_bd_assets,0.668,0.083,8.08,0,0.397,70

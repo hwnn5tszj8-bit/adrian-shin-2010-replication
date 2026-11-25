@@ -1,26 +1,22 @@
-dir.create("data/raw", recursive = TRUE)
-dir.create("data/clean", recursive = TRUE)
-dir.create("scripts")
-dir.create("output/figures", recursive = TRUE)
-dir.create("output/tables", recursive = TRUE)
 # ==============================================================================
 # Script 01: Automated FRED Data Pull (Flow of Funds Z.1, VIX, S&P 500)
 # Paper: Adrian & Shin (2010), "Liquidity and Leverage"
 # ==============================================================================
 
-# Install packages if missing
-packages <- c("quantmod", "tidyverse", "lubridate")
-installed <- packages %in% rownames(installed.packages())
-if (any(!installed)) install.packages(packages[!installed])
-
 library(quantmod)
 library(tidyverse)
 library(lubridate)
 
+# Ensure folders exist
+dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
+dir.create("data/clean", recursive = TRUE, showWarnings = FALSE)
+dir.create("scripts", showWarnings = FALSE)
+dir.create("output/figures", recursive = TRUE, showWarnings = FALSE)
+dir.create("output/tables", recursive = TRUE, showWarnings = FALSE)
+
 # ------------------------------------------------------------------------------
 # 1. Define FRED Series IDs (Board of Governors Z.1 Financial Accounts)
 # ------------------------------------------------------------------------------
-# Note: Leverage = Total Assets / Equity, where Equity = Total Assets - Liabilities
 fred_series <- c(
   # Security Brokers & Dealers (Table L.129)
   "BOGZ1FL664090005Q", # Total Financial Assets
@@ -35,12 +31,12 @@ fred_series <- c(
   "BOGZ1FL734090005Q", # Total Financial Assets
   
   # Households and Nonprofit Organizations (Table B.101)
-  "BOGZ1FL152000005Q", # Total Assets
-  "BOGZ1FL154190005Q", # Total Liabilities
+  "TABSHNO",           # Total Assets
+  "TLBSHNO",           # Total Liabilities
   
   # Nonfinancial Corporate Business (Table B.103)
-  "BOGZ1FL102000005Q", # Total Assets
-  "BOGZ1FL104190005Q", # Total Liabilities
+  "TABSNNCB",          # Total Assets
+  "TLBSNNCB",          # Total Liabilities
   
   # Daily Market Variables (Section 4)
   "VIXCLS",            # CBOE Volatility Index (Daily)
@@ -73,6 +69,7 @@ z1_raw <- z1_names %>%
 write_csv(z1_raw, "data/raw/fred_z1_raw.csv")
 
 # Clean and compute log quarterly growth rates (matching Figures 2.1 - 2.4)
+# Note: TABSHNO/TABSNNCB are in Billions, BOGZ1 series are in Millions (ratios are unit-free)
 z1_clean <- z1_raw %>%
   mutate(
     # Broker-Dealers
@@ -86,13 +83,13 @@ z1_clean <- z1_raw %>%
     cb_lev    = cb_assets / cb_equity,
     
     # Households
-    hh_assets = BOGZ1FL152000005Q,
-    hh_equity = BOGZ1FL152000005Q - BOGZ1FL154190005Q,
+    hh_assets = TABSHNO,
+    hh_equity = TABSHNO - TLBSHNO,
     hh_lev    = hh_assets / hh_equity,
     
     # Nonfinancial Corporates
-    nf_assets = BOGZ1FL102000005Q,
-    nf_equity = BOGZ1FL102000005Q - BOGZ1FL104190005Q,
+    nf_assets = TABSNNCB,
+    nf_equity = TABSNNCB - TLBSNNCB,
     nf_lev    = nf_assets / nf_equity
   ) %>%
   mutate(

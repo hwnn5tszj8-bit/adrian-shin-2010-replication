@@ -1,0 +1,15 @@
+Regime,Variable,Mean,Std_Dev,Median,Min,Max,N
+Pre-GFC (1998-2007),repo_bn,1051.13,310.86,1055.19,517.88,1820.95,492
+Pre-GFC (1998-2007),rev_repo_bn,1156.05,324.45,1145.1,623.22,1907.62,492
+Pre-GFC (1998-2007),d_repo,0.19,10.11,3.12,-57.88,19.43,490
+Pre-GFC (1998-2007),d_rev_repo,0.17,8.8,2.77,-52.31,22.27,490
+Pre-GFC (1998-2007),vix_wed,20.59,7.05,20.34,9.89,43.51,492
+Pre-GFC (1998-2007),realized_vol,NA,NA,NA,Inf,-Inf,0
+Pre-GFC (1998-2007),vrp,NA,NA,NA,Inf,-Inf,0
+Post-GFC (2009-Present),repo_bn,2058.65,926.36,2197.75,529.76,4877.1,907
+Post-GFC (2009-Present),rev_repo_bn,1675.78,619.15,1783.19,204.87,3500.75,907
+Post-GFC (2009-Present),d_repo,0.06,35.44,0.2,-136.61,197.86,906
+Post-GFC (2009-Present),d_rev_repo,-0.19,54.78,0.31,-238.74,238.9,906
+Post-GFC (2009-Present),vix_wed,18.5,6.56,16.92,9.15,76.45,907
+Post-GFC (2009-Present),realized_vol,13.78,12.14,10.8,0.54,152.29,520
+Post-GFC (2009-Present),vrp,4.79,7.87,5.9,-75.84,23.99,520

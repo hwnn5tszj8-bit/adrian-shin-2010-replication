@@ -100,8 +100,10 @@ for (i in seq_len(nrow(banks))) {
         auto_unbox = TRUE,
         pretty = TRUE
       )
+      # Historical submission files store the same column-oriented fields
+      # at the JSON top level (not under filings$recent).
       pieces[[length(pieces) + 1]] <- recent_to_tibble(
-        old_json$filings$recent, bank_i, cik_i
+        old_json, bank_i, cik_i
       )
     }
   }

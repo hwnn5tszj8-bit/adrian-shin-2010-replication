@@ -1,0 +1,10 @@
+bank,report_date,pilot_assets,pilot_equity,accession_number,total_assets,book_equity,source_units,confidence,source_reference,column_number,assets_difference,equity_difference,pilot_match
+Bear Stearns,2007-11-30,395362,11793,,,,,,,,,,Not extracted
+Bear Stearns,2008-02-29,398995,11896,,,,,,,,,,Not extracted
+Goldman Sachs,2007-11-30,1119796,42800,,,,,,,,,,Not extracted
+Goldman Sachs,2008-02-29,1189006,42629,,,,,,,,,,Not extracted
+Lehman Brothers,2007-11-30,691277,22700,,,,,,,,,,Not extracted
+Lehman Brothers,2008-02-29,786035,24832,,,,,,,,,,Not extracted
+Merrill Lynch,2008-03-28,1042054,36542,,,,,,,,,,Not extracted
+Morgan Stanley,2007-11-30,1045409,31269,,,,,,,,,,Not extracted
+Morgan Stanley,2008-02-29,1090896,33280,,,,,,,,,,Not extracted

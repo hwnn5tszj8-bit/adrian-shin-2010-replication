@@ -1,0 +1,100 @@
+indexing sec_document_download_log.csv [] 52.73MB/s, eta:  0s                                              
+====================================
+Bear Stearns 10-K 2007-11-30 
+====================================
+
+====================================
+Bear Stearns 10-Q 2008-02-29 
+====================================
+
+====================================
+Lehman Brothers 10-Q 2008-02-29 
+====================================
+
+TABLE 6 
+Total assets NA $ 786,035 $ 691,063 NA
+
+
+TABLE 46 
+Total assets NA $ 227,333 NA $ 436,842 NA $ 1,293,780 NA $ (1,171,920 ) $ 786,035 NA
+Total liabilities NA 202,501 202,501 NA 431,987 431,987 NA 1,193,371 1,193,371 NA (1,066,656 (1,066,656 ) 761,203 761,203 NA
+Total stockholders equity NA 24,832 24,832 NA 4,855 4,855 NA 100,409 100,409 NA (105,264 (105,264 ) 24,832 24,832 NA
+Total liabilities and stockholders equity NA $ 227,333 NA $ 436,842 NA $ 1,293,780 NA $ (1,171,920 ) $ 786,035 NA
+
+
+TABLE 47 
+Total assets NA $ 213,376 NA $ $ 372,352 NA $ 1,182,700 NA $ (1,077,365 ) $ 691,063 691,063 691,063 691,063 NA
+Total liabilities NA 190,886 190,886 NA 367,906 367,906 367,906 NA 1,081,942 1,081,942 NA (972,161 (972,161 ) 668,573 668,573 668,573 668,573 668,573 NA
+Total stockholders equity NA 22,490 22,490 NA 4,446 4,446 4,446 NA 100,758 100,758 NA (105,204 (105,204 ) 22,490 22,490 22,490 22,490 22,490 NA
+Total liabilities and stockholders equity NA $ 213,376 NA $ 372,352 372,352 NA $ 1,182,700 NA $ (1,077,365 ) $ $ 691,063 691,063 691,063 NA
+
+
+TABLE 52 
+Total assets NA $ 786,035 $ 691,063
+Total assets measured at fair value NA $ 304,096 $ 291,212
+
+
+TABLE 76 
+Total assets NA $ 786,035 $ 691,063
+
+
+TABLE 78 
+Total stockholders equity NA $ 24,832 $ 22,490
+Total assets NA $ 786,035 $ 691,063
+
+
+====================================
+Morgan Stanley 10-K 2007-11-30 
+====================================
+
+TABLE 42 
+Total assets NA $ 1,045,409 $ 1,121,192 $ 898,835 $ 747,578 $ 603,022
+Total capital(2) NA 191,085 162,134 125,891 110,793 82,769
+Shareholders equity NA 31,269 35,364 29,182 28,206 24,867
+
+
+TABLE 120 
+Total assets NA $ 1,045,409 $ 1,121,192 $ 1,202,065 $ 1,022,269
+Shareholders equity NA 31,269 35,364 36,335 32,163
+
+
+TABLE 171 
+Total assets NA $ 1,045,409 NA $ 1,121,192
+
+
+TABLE 371 
+Total Assets(5) NA InstitutionalSecurities InstitutionalSecurities Global WealthManagementGroup Global WealthManagementGroup AssetManagement AssetManagement Discover Discover Total Total
+
+
+TABLE 382 
+Total Assets NA Americas Americas Europe,MiddleEast andAfrica Europe,MiddleEast andAfrica Asia Asia Eliminations Eliminations Total Total
+
+
+TABLE 389 
+Total assets acquired NA 1,706
+Total liabilities assumed NA 30
+
+
+TABLE 445 
+Total assets NA $ 268,453 NA $ 249,200
+Shareholders equity: NA NA
+Total shareholders equity NA 31,269 NA 35,364
+Total liabilities and shareholders equity NA $ 268,453 NA $ 249,200
+
+
+====================================
+Morgan Stanley 10-Q 2008-02-29 
+====================================
+
+TABLE 19 
+Total assets NA $ 1,090,896 $ 1,045,409
+
+
+TABLE 150 
+Total Assets(2) NA InstitutionalSecurities InstitutionalSecurities Global WealthManagementGroup Global WealthManagementGroup AssetManagement AssetManagement Total Total
+
+
+TABLE 250 
+Total assets Total assets Total assets NA $ 1,090,896 $ 1,045,409 $ 1,083,685
+Shareholders equity Shareholders equity Shareholders equity NA 33,280 31,269 32,302
+

@@ -1,0 +1,6 @@
+bank,expected_filings,cached,downloaded,failed,pending,available,coverage_pct
+Bear Stearns,44,2,42,0,0,44,100
+Goldman Sachs,34,2,32,0,0,34,100
+Lehman Brothers,52,2,50,0,0,52,100
+Merrill Lynch,51,1,50,0,0,51,100
+Morgan Stanley,41,2,39,0,0,41,100

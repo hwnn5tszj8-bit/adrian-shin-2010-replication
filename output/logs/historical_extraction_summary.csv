@@ -1,0 +1,6 @@
+bank,documents,documents_with_candidates,documents_without_candidates,total_candidates,extraction_pct,known_units,accounting_passed,promising,ambiguous,verified
+Bear Stearns,44,0,44,0,0,0,0,0,0,0
+Goldman Sachs,34,0,34,0,0,0,0,0,0,0
+Lehman Brothers,52,9,43,84,17.31,6,7,0,6,0
+Merrill Lynch,51,28,23,151,54.9,26,1,0,26,0
+Morgan Stanley,41,8,33,30,19.51,8,0,0,8,0

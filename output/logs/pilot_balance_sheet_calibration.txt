@@ -1,0 +1,873 @@
+
+====================================
+BANK: Bear Stearns 
+FORM: 10-K 
+REPORT DATE: 2007-11-30 
+FILE: data/raw/sec_filings/documents/Bear_Stearns/0000914121-08-000077_be11750956-10k.txt 
+====================================
+HTML tables: 3 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 1 
+Equity row occurrences: 4 
+
+-----------------------------------
+TEXT BLOCK: 2834 - 2880 
+2834: (Provision for) benefit from income taxes...       (160)         20          96
+2835:                                                  ------      ------      ------
+2836: Income (loss) before equity in earnings of           43        (221)       (201)
+2837:    subsidiaries
+2838: 
+2839: Equity in earnings of subsidiaries, net of tax      190       2,275       1,663
+2840:                                                  ------      ------      ------
+2841: Net income..................................     $  233      $2,054      $1,462
+2842:                                                  ======      ======      ======
+2843: 
+2844: See Notes to Condensed Financial Information.
+2845: 
+2846:                                       F-3
+2847:  
+2848: 
+2849:                                                                       SCHEDULE I
+2850: 
+2851:                   CONDENSED FINANCIAL INFORMATION OF REGISTRANT
+2852:                          THE BEAR STEARNS COMPANIES INC.
+2853:                               (PARENT COMPANY ONLY)
+2854:                    CONDENSED STATEMENTS OF FINANCIAL CONDITION
+2855:                         (in millions, except share data)
+2856: 
+2857: As of November 30,                                          2007         2006
+2858:                                                           --------     --------
+2859: 
+2860: ASSETS
+2861: Cash and cash equivalents.............................    $ 17,401     $  2,007
+2862: Securities purchased under agreements to resell.......       1,409           97
+2863: Receivables from subsidiaries.........................      47,985       67,185
+2864: Subordinated loans receivable from subsidiaries.......      12,948        9,963
+2865: Investments in subsidiaries, at equity................       8,097        7,975
+2866: Assets of variable interest entities..................         650          575
+2867: Other assets..........................................       7,587        3,580
+2868:                                                           --------     --------
+2869: Total Assets..........................................    $ 96,077     $ 91,382
+2870:                                                           ========     ========
+2871: 
+2872: LIABILITIES AND STOCKHOLDERS' EQUITY
+2873: Unsecured short-term borrowings.......................    $  8,723     $ 19,467
+2874: Collateralized financings.............................         122           --
+2875: Payables to subsidiaries..............................       6,961        6,573
+2876: Liabilities of variable interest entities.............         205          220
+2877: Other liabilities and accrued expenses................       2,345        1,102
+2878:                                                           --------     --------
+2879:                                                             18,356       27,362
+2880:                                                           --------     -------- 
+
+====================================
+BANK: Bear Stearns 
+FORM: 10-Q 
+REPORT DATE: 2008-02-29 
+FILE: data/raw/sec_filings/documents/Bear_Stearns/0000914121-08-000345_be12550652-10q.txt 
+====================================
+HTML tables: 26 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 13 
+Equity row occurrences: 22 
+
+-----------------------------------
+TEXT BLOCK: 244 - 290 
+244: 
+245:  
+246:  
+247:                                                                                                                 (Unaudited)
+248:                                                                                                          ---------------------------
+249:                                                                                                          February 29,   November 30,
+250: (in millions, except share data)                                                                             2008           2007
+251: ------------------------------------------------------------------------------------------------------------------------------------
+252:                                                                                                                        
+253: ASSETS
+254:    Cash and cash equivalents                                                                              $  20,786       $  21,406
+255: 
+256:    Cash and securities deposited with clearing organizations or
+257:      segregated in compliance with federal regulations                                                       14,910          12,890
+258:    Securities received as collateral                                                                         15,371          15,599
+259:    Collateralized agreements:
+260:       Securities purchased under agreements to resell                                                        26,888          27,878
+261:       Securities borrowed                                                                                    87,143          82,245
+262:    Receivables:
+263: 
+264:      Customers                                                                                               41,990          41,115
+265:      Brokers, dealers and others                                                                             10,854          11,622
+266:      Interest and dividends                                                                                     488             785
+267:    Financial instruments owned, at fair value                                                               118,201         122,518
+268:    Financial instruments owned and pledged as collateral, at fair value                                      22,903          15,724
+269:                                                                                                           --------------------------
+270:    Total financial instruments owned, at fair value                                                         141,104         138,242
+271: 
+272:    Assets of variable interest entities and mortgage loan special purpose entities                           29,991          33,553
+273: 
+274:    Property, equipment and leasehold improvements, net of accumulated
+275:       depreciation and amortization of $1,196 and $1,149 as of  February
+276:       29, 2008 and November 30, 2007, respectively                                                              608             605
+277:    Other assets                                                                                               8,862           9,422
+278:                                                                                                           --------------------------
+279:    Total Assets                                                                                           $ 398,995       $ 395,362
+280:                                                                                                           ==========================
+281: 
+282: LIABILITIES AND STOCKHOLDERS' EQUITY
+283: 
+284:    Unsecured short-term borrowings (includes $434 and $339 at fair value as of                            $   8,538       $  11,643
+285:          February 29, 2008 and November 30, 2007, respectively)
+286:    Obligation to return securities received as collateral                                                    15,371          15,599
+287:    Collateralized financings:
+288:       Securities sold under agreements to repurchase                                                         98,272         102,373
+289:       Securities loaned                                                                                       4,874           3,935
+290:       Other secured borrowings                                                                                7,778          12,361 
+
+-----------------------------------
+TEXT BLOCK: 4840 - 4919 
+4840:                                        60
+4841:  
+4842: 
+4843: 
+4844:                  Item 2. MANAGEMENT'S DISCUSSION AND ANALYSIS
+4845:                 OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS
+4846: 
+4847: 
+4848: Balance Sheet and Financial Leverage
+4849: ------------------------------------
+4850: 
+4851: Asset Composition
+4852: 
+4853: The Company's actual level of balance sheet capital, capital requirements and
+4854: thereby the level of financial leverage, is a function of numerous variables,
+4855: including asset composition, rating agency/creditor perception, business
+4856: prospects, regulatory requirements, balance sheet liquidity, cost/availability
+4857: of capital and risk of loss. The Company consistently maintains a highly liquid
+4858: balance sheet, with the vast majority of the Company's assets consisting of
+4859: cash, marketable securities inventories and collateralized receivables arising
+4860: from customer-related and proprietary securities transactions.
+4861: 
+4862: Collateralized receivables consist of resale agreements secured predominantly by
+4863: U.S. government and agency securities, customer margin loans and securities
+4864: borrowed, which are typically secured by marketable corporate debt and equity
+4865: securities. The nature of the Company's business as a securities dealer requires
+4866: it to carry significant levels of securities inventories to meet its customer
+4867: and proprietary trading needs. Additionally, the Company's role as a financial
+4868: intermediary for customer activities, which it conducts on a principal basis,
+4869: together with its customer-related activities in its clearance business, results
+4870: in significant levels of customer-related balances, including customer margin
+4871: debt, securities borrowed and reverse repurchase activity. The Company's total
+4872: assets and financial leverage can and do fluctuate, depending largely on
+4873: economic and market conditions, volume of activity and customer demand.
+4874: 
+4875: The Company's total assets at February 29, 2008 increased to $399.0 billion from
+4876: $395.4 billion at November 30, 2007. The increase was primarily attributable to
+4877: increases in cash and securities deposited with clearing organizations or
+4878: segregated in compliance with federal regulations, securities borrowed, and
+4879: financial instruments owned, at fair value, partially offset by a decrease in
+4880: assets of variable interest entities and mortgage loan special purpose entities.
+4881: 
+4882: Balance Sheet Size and Variability
+4883: 
+4884: Given the nature of the Company's market-making and customer-financing activity,
+4885: the overall size of the balance sheet fluctuates from time to time. The
+4886: Company's total assets at each quarter end are typically lower than would be
+4887: observed on an average basis. At the end of each quarter, the Company typically
+4888: uses excess cash to finance high-quality, highly liquid securities inventory
+4889: that otherwise would be funded via the repurchase agreement market. In addition,
+4890: the Company reduces its matched book repurchase and reverse repurchase
+4891: activities at quarter end. Finally, the Company may reduce the aggregate level
+4892: of inventories through ordinary course, open market activities in the most
+4893: liquid portions of the balance sheet, which are principally U.S. government and
+4894: agency securities and agency mortgage pass-through securities.
+4895: 
+4896:  At February 29, 2008 and November 30, 2007, total assets of $399.0 billion and
+4897: $395.4 billion were approximately 12.4% and 12.2%, respectively, lower than the
+4898: average of the month-end balances observed over the trailing 12-month period.
+4899: Despite fluctuations in total assets at each quarter end, the Company's overall
+4900: market, credit and liquidity risk profile does not change materially, since the
+4901: reduction in asset balances is predominantly in highly liquid, short-term
+4902: instruments that are financed on a secured basis. This periodic reduction
+4903: verifies the inherently liquid nature of the balance sheet and provides
+4904: consistency with respect to creditor constituents' evaluation of the Company's
+4905: financial condition.
+4906: 
+4907: Leverage Ratios
+4908: 
+4909: Balance sheet leverage measures are one approach to assessing the capital
+4910: adequacy of a securities firm, such as the Company. Gross leverage equals total
+4911: assets divided by stockholders' equity, inclusive of preferred and trust
+4912: preferred equity. The Company views its trust preferred equity as a component of
+4913: its equity capital base given the equity-like characteristics of the securities.
+4914: The Company also receives rating agency equity credit for these securities. Net
+4915: adjusted leverage equals net adjusted assets divided by tangible equity capital,
+4916: which excludes goodwill and intangible assets from both the numerator and the
+4917: denominator, as equity used to support goodwill and intangible assets is not
+4918: available to support
+4919:  
+
+-----------------------------------
+TEXT BLOCK: 4851 - 4919 
+4851: Asset Composition
+4852: 
+4853: The Company's actual level of balance sheet capital, capital requirements and
+4854: thereby the level of financial leverage, is a function of numerous variables,
+4855: including asset composition, rating agency/creditor perception, business
+4856: prospects, regulatory requirements, balance sheet liquidity, cost/availability
+4857: of capital and risk of loss. The Company consistently maintains a highly liquid
+4858: balance sheet, with the vast majority of the Company's assets consisting of
+4859: cash, marketable securities inventories and collateralized receivables arising
+4860: from customer-related and proprietary securities transactions.
+4861: 
+4862: Collateralized receivables consist of resale agreements secured predominantly by
+4863: U.S. government and agency securities, customer margin loans and securities
+4864: borrowed, which are typically secured by marketable corporate debt and equity
+4865: securities. The nature of the Company's business as a securities dealer requires
+4866: it to carry significant levels of securities inventories to meet its customer
+4867: and proprietary trading needs. Additionally, the Company's role as a financial
+4868: intermediary for customer activities, which it conducts on a principal basis,
+4869: together with its customer-related activities in its clearance business, results
+4870: in significant levels of customer-related balances, including customer margin
+4871: debt, securities borrowed and reverse repurchase activity. The Company's total
+4872: assets and financial leverage can and do fluctuate, depending largely on
+4873: economic and market conditions, volume of activity and customer demand.
+4874: 
+4875: The Company's total assets at February 29, 2008 increased to $399.0 billion from
+4876: $395.4 billion at November 30, 2007. The increase was primarily attributable to
+4877: increases in cash and securities deposited with clearing organizations or
+4878: segregated in compliance with federal regulations, securities borrowed, and
+4879: financial instruments owned, at fair value, partially offset by a decrease in
+4880: assets of variable interest entities and mortgage loan special purpose entities.
+4881: 
+4882: Balance Sheet Size and Variability
+4883: 
+4884: Given the nature of the Company's market-making and customer-financing activity,
+4885: the overall size of the balance sheet fluctuates from time to time. The
+4886: Company's total assets at each quarter end are typically lower than would be
+4887: observed on an average basis. At the end of each quarter, the Company typically
+4888: uses excess cash to finance high-quality, highly liquid securities inventory
+4889: that otherwise would be funded via the repurchase agreement market. In addition,
+4890: the Company reduces its matched book repurchase and reverse repurchase
+4891: activities at quarter end. Finally, the Company may reduce the aggregate level
+4892: of inventories through ordinary course, open market activities in the most
+4893: liquid portions of the balance sheet, which are principally U.S. government and
+4894: agency securities and agency mortgage pass-through securities.
+4895: 
+4896:  At February 29, 2008 and November 30, 2007, total assets of $399.0 billion and
+4897: $395.4 billion were approximately 12.4% and 12.2%, respectively, lower than the
+4898: average of the month-end balances observed over the trailing 12-month period.
+4899: Despite fluctuations in total assets at each quarter end, the Company's overall
+4900: market, credit and liquidity risk profile does not change materially, since the
+4901: reduction in asset balances is predominantly in highly liquid, short-term
+4902: instruments that are financed on a secured basis. This periodic reduction
+4903: verifies the inherently liquid nature of the balance sheet and provides
+4904: consistency with respect to creditor constituents' evaluation of the Company's
+4905: financial condition.
+4906: 
+4907: Leverage Ratios
+4908: 
+4909: Balance sheet leverage measures are one approach to assessing the capital
+4910: adequacy of a securities firm, such as the Company. Gross leverage equals total
+4911: assets divided by stockholders' equity, inclusive of preferred and trust
+4912: preferred equity. The Company views its trust preferred equity as a component of
+4913: its equity capital base given the equity-like characteristics of the securities.
+4914: The Company also receives rating agency equity credit for these securities. Net
+4915: adjusted leverage equals net adjusted assets divided by tangible equity capital,
+4916: which excludes goodwill and intangible assets from both the numerator and the
+4917: denominator, as equity used to support goodwill and intangible assets is not
+4918: available to support
+4919:  
+
+-----------------------------------
+TEXT BLOCK: 4861 - 4919 
+4861: 
+4862: Collateralized receivables consist of resale agreements secured predominantly by
+4863: U.S. government and agency securities, customer margin loans and securities
+4864: borrowed, which are typically secured by marketable corporate debt and equity
+4865: securities. The nature of the Company's business as a securities dealer requires
+4866: it to carry significant levels of securities inventories to meet its customer
+4867: and proprietary trading needs. Additionally, the Company's role as a financial
+4868: intermediary for customer activities, which it conducts on a principal basis,
+4869: together with its customer-related activities in its clearance business, results
+4870: in significant levels of customer-related balances, including customer margin
+4871: debt, securities borrowed and reverse repurchase activity. The Company's total
+4872: assets and financial leverage can and do fluctuate, depending largely on
+4873: economic and market conditions, volume of activity and customer demand.
+4874: 
+4875: The Company's total assets at February 29, 2008 increased to $399.0 billion from
+4876: $395.4 billion at November 30, 2007. The increase was primarily attributable to
+4877: increases in cash and securities deposited with clearing organizations or
+4878: segregated in compliance with federal regulations, securities borrowed, and
+4879: financial instruments owned, at fair value, partially offset by a decrease in
+4880: assets of variable interest entities and mortgage loan special purpose entities.
+4881: 
+4882: Balance Sheet Size and Variability
+4883: 
+4884: Given the nature of the Company's market-making and customer-financing activity,
+4885: the overall size of the balance sheet fluctuates from time to time. The
+4886: Company's total assets at each quarter end are typically lower than would be
+4887: observed on an average basis. At the end of each quarter, the Company typically
+4888: uses excess cash to finance high-quality, highly liquid securities inventory
+4889: that otherwise would be funded via the repurchase agreement market. In addition,
+4890: the Company reduces its matched book repurchase and reverse repurchase
+4891: activities at quarter end. Finally, the Company may reduce the aggregate level
+4892: of inventories through ordinary course, open market activities in the most
+4893: liquid portions of the balance sheet, which are principally U.S. government and
+4894: agency securities and agency mortgage pass-through securities.
+4895: 
+4896:  At February 29, 2008 and November 30, 2007, total assets of $399.0 billion and
+4897: $395.4 billion were approximately 12.4% and 12.2%, respectively, lower than the
+4898: average of the month-end balances observed over the trailing 12-month period.
+4899: Despite fluctuations in total assets at each quarter end, the Company's overall
+4900: market, credit and liquidity risk profile does not change materially, since the
+4901: reduction in asset balances is predominantly in highly liquid, short-term
+4902: instruments that are financed on a secured basis. This periodic reduction
+4903: verifies the inherently liquid nature of the balance sheet and provides
+4904: consistency with respect to creditor constituents' evaluation of the Company's
+4905: financial condition.
+4906: 
+4907: Leverage Ratios
+4908: 
+4909: Balance sheet leverage measures are one approach to assessing the capital
+4910: adequacy of a securities firm, such as the Company. Gross leverage equals total
+4911: assets divided by stockholders' equity, inclusive of preferred and trust
+4912: preferred equity. The Company views its trust preferred equity as a component of
+4913: its equity capital base given the equity-like characteristics of the securities.
+4914: The Company also receives rating agency equity credit for these securities. Net
+4915: adjusted leverage equals net adjusted assets divided by tangible equity capital,
+4916: which excludes goodwill and intangible assets from both the numerator and the
+4917: denominator, as equity used to support goodwill and intangible assets is not
+4918: available to support
+4919:  
+
+-----------------------------------
+TEXT BLOCK: 4864 - 4919 
+4864: borrowed, which are typically secured by marketable corporate debt and equity
+4865: securities. The nature of the Company's business as a securities dealer requires
+4866: it to carry significant levels of securities inventories to meet its customer
+4867: and proprietary trading needs. Additionally, the Company's role as a financial
+4868: intermediary for customer activities, which it conducts on a principal basis,
+4869: together with its customer-related activities in its clearance business, results
+4870: in significant levels of customer-related balances, including customer margin
+4871: debt, securities borrowed and reverse repurchase activity. The Company's total
+4872: assets and financial leverage can and do fluctuate, depending largely on
+4873: economic and market conditions, volume of activity and customer demand.
+4874: 
+4875: The Company's total assets at February 29, 2008 increased to $399.0 billion from
+4876: $395.4 billion at November 30, 2007. The increase was primarily attributable to
+4877: increases in cash and securities deposited with clearing organizations or
+4878: segregated in compliance with federal regulations, securities borrowed, and
+4879: financial instruments owned, at fair value, partially offset by a decrease in
+4880: assets of variable interest entities and mortgage loan special purpose entities.
+4881: 
+4882: Balance Sheet Size and Variability
+4883: 
+4884: Given the nature of the Company's market-making and customer-financing activity,
+4885: the overall size of the balance sheet fluctuates from time to time. The
+4886: Company's total assets at each quarter end are typically lower than would be
+4887: observed on an average basis. At the end of each quarter, the Company typically
+4888: uses excess cash to finance high-quality, highly liquid securities inventory
+4889: that otherwise would be funded via the repurchase agreement market. In addition,
+4890: the Company reduces its matched book repurchase and reverse repurchase
+4891: activities at quarter end. Finally, the Company may reduce the aggregate level
+4892: of inventories through ordinary course, open market activities in the most
+4893: liquid portions of the balance sheet, which are principally U.S. government and
+4894: agency securities and agency mortgage pass-through securities.
+4895: 
+4896:  At February 29, 2008 and November 30, 2007, total assets of $399.0 billion and
+4897: $395.4 billion were approximately 12.4% and 12.2%, respectively, lower than the
+4898: average of the month-end balances observed over the trailing 12-month period.
+4899: Despite fluctuations in total assets at each quarter end, the Company's overall
+4900: market, credit and liquidity risk profile does not change materially, since the
+4901: reduction in asset balances is predominantly in highly liquid, short-term
+4902: instruments that are financed on a secured basis. This periodic reduction
+4903: verifies the inherently liquid nature of the balance sheet and provides
+4904: consistency with respect to creditor constituents' evaluation of the Company's
+4905: financial condition.
+4906: 
+4907: Leverage Ratios
+4908: 
+4909: Balance sheet leverage measures are one approach to assessing the capital
+4910: adequacy of a securities firm, such as the Company. Gross leverage equals total
+4911: assets divided by stockholders' equity, inclusive of preferred and trust
+4912: preferred equity. The Company views its trust preferred equity as a component of
+4913: its equity capital base given the equity-like characteristics of the securities.
+4914: The Company also receives rating agency equity credit for these securities. Net
+4915: adjusted leverage equals net adjusted assets divided by tangible equity capital,
+4916: which excludes goodwill and intangible assets from both the numerator and the
+4917: denominator, as equity used to support goodwill and intangible assets is not
+4918: available to support
+4919:  
+
+-----------------------------------
+TEXT BLOCK: 4899 - 4973 
+4899: Despite fluctuations in total assets at each quarter end, the Company's overall
+4900: market, credit and liquidity risk profile does not change materially, since the
+4901: reduction in asset balances is predominantly in highly liquid, short-term
+4902: instruments that are financed on a secured basis. This periodic reduction
+4903: verifies the inherently liquid nature of the balance sheet and provides
+4904: consistency with respect to creditor constituents' evaluation of the Company's
+4905: financial condition.
+4906: 
+4907: Leverage Ratios
+4908: 
+4909: Balance sheet leverage measures are one approach to assessing the capital
+4910: adequacy of a securities firm, such as the Company. Gross leverage equals total
+4911: assets divided by stockholders' equity, inclusive of preferred and trust
+4912: preferred equity. The Company views its trust preferred equity as a component of
+4913: its equity capital base given the equity-like characteristics of the securities.
+4914: The Company also receives rating agency equity credit for these securities. Net
+4915: adjusted leverage equals net adjusted assets divided by tangible equity capital,
+4916: which excludes goodwill and intangible assets from both the numerator and the
+4917: denominator, as equity used to support goodwill and intangible assets is not
+4918: available to support
+4919: 
+4920: 
+4921:                                        61
+4922:  
+4923: 
+4924: 
+4925:                  Item 2. MANAGEMENT'S DISCUSSION AND ANALYSIS
+4926:                 OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS
+4927: 
+4928: 
+4929: the balance of the Company's net assets. With respect to a comparative measure
+4930: of financial risk and capital adequacy, the Company believes that the low-risk,
+4931: collateralized nature of the items excluded in deriving net adjusted assets (see
+4932: table below) renders net adjusted leverage as the more relevant measure.
+4933: 
+4934: The following table presents total assets and net adjusted assets with the
+4935: resultant leverage ratios at February 29, 2008 and November 30, 2007:
+4936: 
+4937:  
+4938:  
+4939:                                                                                                    February 29,      November 30,
+4940:   (in millions, except ratios)                                                                         2008              2007
+4941: ------------------------------------------------------------------------------------------------------------------------------------
+4942:                                                                                                                
+4943:    Total assets                                                                                 $        398,995   $        395,362
+4944:        Deduct:
+4945:           Cash and securities deposited with clearing
+4946:        organizations or segregated in compliance with federal
+4947:        regulations                                                                                        14,910             12,890
+4948:            Securities purchased under agreements to resell                                                26,888             27,878
+4949:            Securities received as collateral                                                              15,371             15,599
+4950:            Securities borrowed                                                                            87,143             82,245
+4951:            Receivables from customers                                                                     41,990             41,115
+4952:            Assets of variable interest entities and
+4953:               Mortgage loan special purpose entities, net                                                 26,739             30,605
+4954:            Goodwill & intangible assets                                                                      935                952
+4955: ------------------------------------------------------------------------------------------------------------------------------------
+4956:    Subtotal                                                                                              185,019            184,078
+4957: ------------------------------------------------------------------------------------------------------------------------------------
+4958:        Add:
+4959:            Financial instruments sold, but not yet purchased                                              51,544             43,807
+4960:        Deduct:
+4961:            Derivative financial instruments                                                               16,510             13,492
+4962: ------------------------------------------------------------------------------------------------------------------------------------
+4963:    Net adjusted assets                                                                          $        220,053   $        214,393
+4964: ====================================================================================================================================
+4965:    Stockholders' equity
+4966:            Common equity                                                                        $         11,544   $         11,441
+4967:            Preferred stock                                                                                   352                352
+4968: 
+4969: ------------------------------------------------------------------------------------------------------------------------------------
+4970:    Total stockholders' equity                                                                             11,896             11,793
+4971: ------------------------------------------------------------------------------------------------------------------------------------
+4972:        Add:
+4973:            Trust preferred equity                                                                            263                263 
+
+-----------------------------------
+TEXT BLOCK: 4908 - 4973 
+4908: 
+4909: Balance sheet leverage measures are one approach to assessing the capital
+4910: adequacy of a securities firm, such as the Company. Gross leverage equals total
+4911: assets divided by stockholders' equity, inclusive of preferred and trust
+4912: preferred equity. The Company views its trust preferred equity as a component of
+4913: its equity capital base given the equity-like characteristics of the securities.
+4914: The Company also receives rating agency equity credit for these securities. Net
+4915: adjusted leverage equals net adjusted assets divided by tangible equity capital,
+4916: which excludes goodwill and intangible assets from both the numerator and the
+4917: denominator, as equity used to support goodwill and intangible assets is not
+4918: available to support
+4919: 
+4920: 
+4921:                                        61
+4922:  
+4923: 
+4924: 
+4925:                  Item 2. MANAGEMENT'S DISCUSSION AND ANALYSIS
+4926:                 OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS
+4927: 
+4928: 
+4929: the balance of the Company's net assets. With respect to a comparative measure
+4930: of financial risk and capital adequacy, the Company believes that the low-risk,
+4931: collateralized nature of the items excluded in deriving net adjusted assets (see
+4932: table below) renders net adjusted leverage as the more relevant measure.
+4933: 
+4934: The following table presents total assets and net adjusted assets with the
+4935: resultant leverage ratios at February 29, 2008 and November 30, 2007:
+4936: 
+4937:  
+4938:  
+4939:                                                                                                    February 29,      November 30,
+4940:   (in millions, except ratios)                                                                         2008              2007
+4941: ------------------------------------------------------------------------------------------------------------------------------------
+4942:                                                                                                                
+4943:    Total assets                                                                                 $        398,995   $        395,362
+4944:        Deduct:
+4945:           Cash and securities deposited with clearing
+4946:        organizations or segregated in compliance with federal
+4947:        regulations                                                                                        14,910             12,890
+4948:            Securities purchased under agreements to resell                                                26,888             27,878
+4949:            Securities received as collateral                                                              15,371             15,599
+4950:            Securities borrowed                                                                            87,143             82,245
+4951:            Receivables from customers                                                                     41,990             41,115
+4952:            Assets of variable interest entities and
+4953:               Mortgage loan special purpose entities, net                                                 26,739             30,605
+4954:            Goodwill & intangible assets                                                                      935                952
+4955: ------------------------------------------------------------------------------------------------------------------------------------
+4956:    Subtotal                                                                                              185,019            184,078
+4957: ------------------------------------------------------------------------------------------------------------------------------------
+4958:        Add:
+4959:            Financial instruments sold, but not yet purchased                                              51,544             43,807
+4960:        Deduct:
+4961:            Derivative financial instruments                                                               16,510             13,492
+4962: ------------------------------------------------------------------------------------------------------------------------------------
+4963:    Net adjusted assets                                                                          $        220,053   $        214,393
+4964: ====================================================================================================================================
+4965:    Stockholders' equity
+4966:            Common equity                                                                        $         11,544   $         11,441
+4967:            Preferred stock                                                                                   352                352
+4968: 
+4969: ------------------------------------------------------------------------------------------------------------------------------------
+4970:    Total stockholders' equity                                                                             11,896             11,793
+4971: ------------------------------------------------------------------------------------------------------------------------------------
+4972:        Add:
+4973:            Trust preferred equity                                                                            263                263 
+
+-----------------------------------
+TEXT BLOCK: 5001 - 5126 
+5001: The Company's total capital base, which consists of long-term debt, preferred
+5002: equity issued by subsidiaries and total stockholders' equity, increased to $83.7
+5003: billion at February 29, 2008 from $80.3 billion at November 30, 2007. This
+5004: change was primarily due to a net increase in long-term debt.
+5005: 
+5006: The Company's total capital base as of February 29, 2008 and November 30, 2007
+5007: was as follows:
+5008: 
+5009:                                           February 29,      November 30,
+5010: (in millions)                                 2008             2007
+5011: ---------------------------------------------------------------------------
+5012: Long-term borrowings:
+5013: 
+5014: Senior debt                           $       70,490     $         67,275
+5015: Subordinated debt (1)                          1,263                1,263
+5016: ---------------------------------------------------------------------------
+5017:   Total long-term borrowings          $       71,753     $         68,538
+5018: Stockholders' equity:
+5019: Preferred stockholders' equity        $          352     $            352
+5020: Common stockholders' equity                   11,544               11,441
+5021: ---------------------------------------------------------------------------
+5022:   Total stockholders' equity          $       11,896     $         11,793
+5023: ---------------------------------------------------------------------------
+5024:     Total capital                     $       83,649     $         80,331
+5025: ===========================================================================
+5026: 
+5027: (1)   Includes $1.0 billion in subordinated debt issued by the Company and $263
+5028:       million in junior subordinated deferrable interest debentures
+5029:       ("Debentures") issued by the Company and held by Bear Stearns Capital
+5030:       Trust III ("Capital Trust III") at February 29, 2008 and November 30,
+5031:       2007.
+5032: 
+5033: 
+5034: The amount of long-term debt as well as total capital that the Company maintains
+5035: is driven by a number of factors, with particular focus on asset composition.
+5036: The Company's ability to support increases in total assets is a function of its
+5037: ability to obtain short-term secured and unsecured funding, as well as its
+5038: access to longer-term sources of capital (i.e., long-term debt and equity). The
+5039: Company regularly measures and monitors its total capital requirements, which
+5040: are primarily a function of the self-funding ability of its assets. The equity
+5041: portion of total capital is primarily a function of on- and off-balance-sheet
+5042: risks (i.e., market, credit and liquidity) and regulatory capital requirements.
+5043: As such, the liquidity and risk characteristics of assets being held are
+5044: critical determinants of both total capital and the equity portion thereof, thus
+5045: significantly influencing the amount of leverage that the Company can employ.
+5046: 
+5047: Credit Ratings
+5048: 
+5049: The Company's access to external sources of financing, as well as the cost of
+5050: that financing, is dependent on various factors and could be adversely affected
+5051: by a deterioration of the Company's long- and short-term debt ratings, which are
+5052: influenced by a number of factors. These include, but are not limited to:
+5053: 
+5054:       o     Material changes in operating margins;
+5055:       o     Earnings trends and volatility;
+5056:       o     The prudence of funding and liquidity management practices;
+5057:       o     Significant reductions in available liquidity;
+5058:       o     Perceived changes in risk appetite;
+5059:       o     Financial leverage on an absolute basis or relative to peers;
+5060:       o     The composition of the balance sheet and/or capital structure;
+5061:       o     Geographic and business diversification; and
+5062:       o     The Company's market share and competitive position in the business
+5063:             segments in which it operates.
+5064: 
+5065: 
+5066:                                        63
+5067:  
+5068: 
+5069: 
+5070:                  Item 2. MANAGEMENT'S DISCUSSION AND ANALYSIS
+5071:                 OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS
+5072: 
+5073: 
+5074: At the date of filing, the Company's long-term/short-term debt ratings were as
+5075: follows:
+5076: 
+5077:                                             Long-Term       Short-Term
+5078:                                               Rating          Rating
+5079: 
+5080: -------------------------------------------------------------------------
+5081: Dominion Bond Rating Service Limited            A           R-1(low)
+5082: Fitch Ratings                                   A-             F2
+5083: Japan Credit Rating Agency, Ltd                AA-             NR
+5084: Moody's Investors Service (1)                 Baa1            P-2
+5085: Rating & Investment Information, Inc.           A-             NR
+5086: Standard & Poor's Ratings
+5087: Services                                       AA-            A-1+
+5088: -------------------------------------------------------------------------
+5089: NR - does not assign a short-term rating
+5090: 
+5091: (1)   On March 25, 2008, Moody's assigned Aa2 Backed Long-term and Prime-1
+5092:       Backed Short-term Issuer ratings to Bear Stearns and certain rated
+5093:       subsidiaries that explicitly benefit from the Amended and Restated
+5094:       Guaranty Agreement from JPMorgan Chase & Co.
+5095: 
+5096: The above ratings and/or associated outlooks, to varying degrees, are positively
+5097: influenced by the proposed merger with and guarantee by JPMorgan Chase. In the
+5098: absence of the guarantee and merger, the ratings and/or outlook assigned to the
+5099: Company by all agencies would be lower and/or negative. Following the March 24,
+5100: 2008 amendment to the merger agreement and execution of the amended and restated
+5101: guarantee (See Note 17, "Subsequent Events," of Notes to Condensed Consolidated
+5102: Financial Statements), all rating agencies listed above took favorable rating
+5103: actions.
+5104: 
+5105: Committed Credit Facilities
+5106: ---------------------------
+5107: 
+5108: As of February 29, 2008, the Company had a committed revolving credit facility
+5109: ("Facility") totaling $2.9 billion, which permitted borrowing on a secured basis
+5110: by the Parent Company, BSSC, BSIL and certain other subsidiaries. The Facility
+5111: terminated on April 7, 2008. There were no borrowings outstanding under the
+5112: Facility at February 29, 2008 or on the termination date.
+5113: 
+5114: The Company has a $1.50 billion committed revolving securities repo facility
+5115: ("Repo Facility"), which permits borrowings secured by a broad range of
+5116: collateral under a repurchase arrangement by the Parent Company, BSIL, BSIT and
+5117: BSB and BS Forex. The Repo Facility contains financial covenants that require,
+5118: among other things, maintenance of specified levels of stockholders' equity of
+5119: the Company. The Repo Facility terminates in August 2008, with all repos
+5120: outstanding at that date payable no later than August 2009. There were no
+5121: borrowings outstanding under the Repo Facility at February 29, 2008.
+5122: 
+5123: The Company has a $350 million committed revolving credit facility ("Pan Asian
+5124: Facility"), which permits borrowing on a secured basis by the Parent Company,
+5125: BSSC, Bear Stearns Japan Limited ("BSJL"), and BSIL. The Pan Asian Facility
+5126: contains financial covenants that require, among other things, maintenance of 
+
+====================================
+BANK: Goldman Sachs 
+FORM: 10-K 
+REPORT DATE: 2007-11-30 
+FILE: data/raw/sec_filings/documents/Goldman_Sachs/0000950123-08-000857_y46519e10vk.htm 
+====================================
+HTML tables: 263 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 28 
+Equity row occurrences: 1 
+
+====================================
+BANK: Goldman Sachs 
+FORM: 10-Q 
+REPORT DATE: 2008-02-29 
+FILE: data/raw/sec_filings/documents/Goldman_Sachs/0000950123-08-003960_y51267e10vq.htm 
+====================================
+HTML tables: 197 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 22 
+Equity row occurrences: 1 
+
+====================================
+BANK: Lehman Brothers 
+FORM: 10-K 
+REPORT DATE: 2007-11-30 
+FILE: data/raw/sec_filings/documents/Lehman_Brothers/0001104659-08-005476_a08-3530_110k.htm 
+====================================
+HTML tables: 136 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 20 
+Equity row occurrences: 7 
+
+====================================
+BANK: Lehman Brothers 
+FORM: 10-Q 
+REPORT DATE: 2008-02-29 
+FILE: data/raw/sec_filings/documents/Lehman_Brothers/0001104659-08-023292_a08-10156_110q.htm 
+====================================
+HTML tables: 95 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 18 
+Equity row occurrences: 6 
+
+====================================
+BANK: Merrill Lynch 
+FORM: 10-K 
+REPORT DATE: 2007-12-28 
+FILE: data/raw/sec_filings/documents/Merrill_Lynch/0000950123-08-002050_y46644e10vk.htm 
+====================================
+HTML tables: 564 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 13 
+Equity row occurrences: 0 
+
+====================================
+BANK: Merrill Lynch 
+FORM: 10-Q 
+REPORT DATE: 2008-03-28 
+FILE: data/raw/sec_filings/documents/Merrill_Lynch/0000950123-08-005157_y56688e10vq.htm 
+====================================
+HTML tables: 188 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 12 
+Equity row occurrences: 0 
+
+====================================
+BANK: Morgan Stanley 
+FORM: 10-K 
+REPORT DATE: 2007-11-30 
+FILE: data/raw/sec_filings/documents/Morgan_Stanley/0001193125-08-013719_d10k.htm 
+====================================
+HTML tables: 459 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 24 
+Equity row occurrences: 2 
+
+====================================
+BANK: Morgan Stanley 
+FORM: 10-Q 
+REPORT DATE: 2008-02-29 
+FILE: data/raw/sec_filings/documents/Morgan_Stanley/0001193125-08-077429_d10q.htm 
+====================================
+HTML tables: 308 
+
+PLAIN-TEXT INSPECTION
+Asset row occurrences: 14 
+Equity row occurrences: 2 
+
+-----------------------------------
+TEXT BLOCK: 16180 - 16277 
+16180:  &nbsp;  
+16181:  
+16182:     Adjusted leverage ratio(2)   
+16183:   &nbsp;  
+16184:   &nbsp;  
+16185:   16.0x  
+16186:   &nbsp;  
+16187:   &nbsp;  
+16188:   &nbsp;  
+16189:   17.6x  
+16190:   &nbsp;  
+16191:   &nbsp;  
+16192:   &nbsp;  
+16193:   16.7x  
+16194:   &nbsp;   
+16195:  
+16196:   
+16197:  &nbsp; 
+16198:   
+16199:  &nbsp; 
+16200:  &nbsp; 
+16201:  &nbsp; 
+16202:  &nbsp; 
+16203:  &nbsp; 
+16204:  &nbsp; 
+16205:  &nbsp; 
+16206:  &nbsp; 
+16207:  &nbsp; 
+16208:  &nbsp; 
+16209:  &nbsp; 
+16210:  &nbsp;  
+16211:    &nbsp; 
+16212:  
+16213:  
+16214:   (1)  
+16215:   Leverage ratio equals total assets divided by tangible shareholders&#146; equity.     
+16216:  
+16217:  
+16218:   (2)  
+16219:   Adjusted leverage ratio equals adjusted assets divided by tangible shareholders&#146; equity.       <FONT
+16220: FACE="Times New Roman" SIZE="2">The Company&#146;s discipline in maintaining an appropriately sized balance sheet along with the adequate capital position has brought the leverage ratio down to 27.4x from 32.6x and the adjusted leverage ratio down
+16221: to 16.0x from 17.6x.       Activity in the Quarter Ended February&nbsp;29, 2008.      <FONT
+16222: FACE="Times New Roman" SIZE="2">The Company&#146;s total capital consists of shareholders&#146; equity, long-term borrowings (debt obligations scheduled to mature in more than 12 months) and junior subordinated debt issued to capital trusts. At
+16223: February&nbsp;29, 2008, total capital was $198,210 million, an increase of $7,125 million from November&nbsp;30, 2007.      &nbsp;  
+16224: 
+16225:  
+16226: 
+16227:  
+16228:   
+16229:   
+16230:   
+16231:   
+16232:    
+16233:  
+16234:  
+16235: 
+16236:   
+16237:   &nbsp;  
+16238:   73  
+16239:   &nbsp;  
+16240:    
+16241:  
+16242: 
+16243: 
+16244:  
+16245:  
+16246:   Table of Contents  
+16247: 
+16248:    During the quarter ended February&nbsp;29, 2008, the Company issued notes with a carrying value at quarter-end
+16249: aggregating $15.9 billion, including non-U.S. dollar currency notes aggregating $3.7 billion. In connection with the note issuances, the Company has entered into certain transactions to obtain floating interest rates based primarily on short-term
+16250: London Interbank Offered Rates (&#147;LIBOR&#148;) trading levels. At February&nbsp;29, 2008, the aggregate outstanding principal amount of the Company&#146;s Senior Indebtedness (as defined in the Company&#146;s senior debt indentures) was
+16251: approximately $208 billion (including guaranteed obligations of the indebtedness of subsidiaries). The weighted average maturity of the Company&#146;s long-term borrowings, based upon stated maturity dates, was approximately 6.2 years at
+16252: February&nbsp;29, 2008. In addition, in December 2007, the Company sold Equity Units to a wholly owned subsidiary of CIC for approximately $5,579 million. See &#147;China Investment Corporation Investment&#148; herein.    <P
+16253: STYLE="margin-top:18px;margin-bottom:0px">  China Investment Corporation Investment.       In December 2007, the
+16254: Company sold Equity Units which included contracts to purchase Company common stock to a wholly owned subsidiary of CIC for approximately $5,579 million. CIC&#146;s ownership in the Company&#146;s common stock, including the maximum number of shares
+16255: of common stock to be received by CIC upon settlement of the stock purchase contracts, will be 9.9% or less of the Company&#146;s total shares outstanding based on the total shares that were outstanding on November&nbsp;30, 2007. CIC is a passive
+16256: financial investor and has no special rights of ownership nor a role in the management of the Company. A substantial portion of the investment proceeds were treated as Tier 1 capital for regulatory capital purposes.    <P
+16257: STYLE="margin-top:12px;margin-bottom:0px"> For a more detailed summary of the Equity Units, including the junior subordinated debentures issued to support trust common and trust preferred securities and the stock
+16258: purchase contracts, refer to &#147;Management&#146;s Discussion and Analysis of Financial Condition and Results of Operations&#151;Liquidity and Capital Resources&#148; in Part II, Item&nbsp;7 of the Form 10-K and &#147;Financial Statements and
+16259: Supplementary Data&#151;Note 28&#148; in Part II, Item&nbsp;8 of the Form 10-K.      Prior to the issuance of common stock upon settlement of the stock
+16260: purchase contract, the impact of the Equity Units are reflected in the Company&#146;s earnings per diluted common share using the treasury stock method, as defined by SFAS No.&nbsp;128, &#147;Earnings Per Share.&#148; Under the treasury stock
+16261: method, the number of shares of common stock included in the calculation of earnings per diluted common share are calculated as the excess, if any, of the number of shares expected to be issued upon settlement of the stock purchase contract based on
+16262: the average market price for the last 20 days of the reporting period, less the number of shares that could be purchased by the Company with the proceeds to be received upon settlement of the contract at the average closing price for the reporting
+16263: period.      Dilution of net income per share occurs (i)&nbsp;in reporting periods when the average closing price of common shares is over $57.6840 per share
+16264: or (ii)&nbsp;in reporting periods when the average closing price of common shares for a reporting period is between $48.0700 and $57.6840 and is greater than the average market price for the last 20 days ending three days prior to the end of such
+16265: reporting period.      The dilutive impact for the first quarter of fiscal 2008 was approximately 256,000 shares.    <P
+16266: STYLE="margin-top:18px;margin-bottom:0px">  Equity Capital Management Policies.       The Company&#146;s senior
+16267: management views equity capital as an important source of financial strength. The Company actively manages its consolidated equity capital position based upon, among other things, business opportunities, capital availability and rates of return
+16268: together with internal capital policies, regulatory requirements and rating agency guidelines and, therefore, in the future may expand or contract its equity capital base to address the changing needs of its businesses. The Company attempts to
+16269: maintain total equity, on a consolidated basis, at least equal to the sum of its operating subsidiaries&#146; equity.      At February&nbsp;29, 2008, the
+16270: Company&#146;s equity capital (which includes shareholders&#146; equity and junior subordinated debt issued to capital trusts) was $43,901 million, an increase of $7,756 million from November&nbsp;30, 2007, primarily due to the CIC investment. The
+16271: Company returns internally generated equity capital that is in  
+16272:     &nbsp;  
+16273: 
+16274:  
+16275: 
+16276:  
+16277:    

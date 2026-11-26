@@ -65,8 +65,8 @@ fig2_4_extension <- ggplot(bd_compare, aes(x = d_bd_lev, y = d_bd_assets)) +
   facet_wrap(~ sample_period, ncol = 2) +
   scale_color_manual(values = c("Original (1963-2006)" = "#1f4e78", "Post-GFC (2009-Present)" = "#d95f02")) +
   labs(
-    title = "Structural Shift in Broker-Dealer Leverage Procyclicality (Fig. 2.4 Extended)",
-    subtitle = "Post-2008 regulations (Basel III / SLR) dampened procyclical balance sheet expansion",
+    title = "Broker-Dealer Leverage Growth Before and After the GFC",
+    subtitle = "Quarterly percentage log changes; Source: Federal Reserve Z.1",
     x = "Leverage Growth (% Quarterly)",
     y = "Total Asset Growth (% Quarterly)"
   ) +

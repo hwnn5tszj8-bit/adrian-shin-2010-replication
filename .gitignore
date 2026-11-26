@@ -1,0 +1,8 @@
+.RData
+.Rhistory
+.Ruserdata
+.Rproj.user/
+.Renviron
+*_cache/
+# R Markdown HTML support files. Keep the source .R and .Rmd files.
+*_files/

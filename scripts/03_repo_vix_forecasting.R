@@ -1,6 +1,6 @@
 # ==============================================================================
 # Script 03: Weekly Primary Dealer Repos & VIX / Volatility Risk Premium
-# Replicates & Extends Table 4, Table 5, and Figure 4.1 (Adrian & Shin, 2010)
+# Related analyses for Tables 4–5 and Figure 4.1 (Adrian & Shin, 2010)
 # ==============================================================================
 
 packages <- c("tidyverse", "lubridate", "sandwich", "lmtest")
@@ -129,6 +129,11 @@ panel_weekly <- dealer_weekly %>%
     )
   )
 
+panel_weekly <- panel_weekly %>%
+  mutate(
+    across(c(d_repo, d_rev_repo, d_net_repo), ~ ifelse(date %in% as.Date(c("2001-07-04", "2013-04-03")), NA_real_, .x))
+  )
+
 write_csv(panel_weekly, "data/clean/weekly_dealer_vix_panel.csv")
 
 # ------------------------------------------------------------------------------
@@ -139,14 +144,15 @@ calc_summary <- function(df, regime_label) {
   map_dfr(vars, function(v) {
     x <- df[[v]]
     x <- x[!is.na(x)]
+    limits <- if (length(x)) range(x) else c(NA_real_, NA_real_)
     tibble(
       Regime   = regime_label,
       Variable = v,
-      Mean     = round(mean(x), 2),
+      Mean     = if (length(x)) round(mean(x), 2) else NA_real_,
       Std_Dev  = round(sd(x), 2),
       Median   = round(median(x), 2),
-      Min      = round(min(x), 2),
-      Max      = round(max(x), 2),
+      Min      = round(limits[1], 2),
+      Max      = round(limits[2], 2),
       N        = length(x)
     )
   })
@@ -180,18 +186,11 @@ run_forecast_reg <- function(df, formula_str, model_label) {
 
 pre_df     <- panel_weekly %>% filter(regime == "Pre-GFC (1998-2007)")
 post_df    <- panel_weekly %>% filter(regime == "Post-GFC (2009-Present)")
-modern_vrp <- panel_weekly %>% filter(!is.na(vrp), !is.na(vrp_lead1), !is.na(sp500_wk_ret))
-
 table5 <- bind_rows(
-  # Pre-GFC Full Sample (1998 - 2007): VIX Forecasting
-  run_forecast_reg(pre_df,     "vix_lead1 ~ d_repo + vix_wed",                "1. Pre-GFC (1998-2007): VIX(t+1)"),
-  run_forecast_reg(pre_df,     "d_vix_lead1 ~ d_repo + vix_wed",              "2. Pre-GFC (1998-2007): dVIX(t+1)"),
-  # Post-GFC Full Sample (2009 - Present): VIX Forecasting
-  run_forecast_reg(post_df,    "vix_lead1 ~ d_repo + vix_wed",                "3. Post-GFC (2009-Present): VIX(t+1)"),
-  run_forecast_reg(post_df,    "d_vix_lead1 ~ d_repo + vix_wed",              "4. Post-GFC (2009-Present): dVIX(t+1)"),
-  # Modern S&P 500 Window (2016 - Present): VIX + Equity Return + VRP
-  run_forecast_reg(modern_vrp, "vix_lead1 ~ d_repo + vix_wed + sp500_wk_ret", "5. Modern (2016+): VIX(t+1) + S&P500"),
-  run_forecast_reg(modern_vrp, "vrp_lead1 ~ d_repo + vrp + sp500_wk_ret",     "6. Modern (2016+): VRP(t+1) + S&P500")
+  run_forecast_reg(pre_df,  "vix_lead1 ~ d_repo + vix_wed",   "1. Pre-GFC (1998-2007): VIX(t+1)"),
+  run_forecast_reg(pre_df,  "d_vix_lead1 ~ d_repo + vix_wed", "2. Pre-GFC (1998-2007): dVIX(t+1)"),
+  run_forecast_reg(post_df, "vix_lead1 ~ d_repo + vix_wed",   "3. Post-GFC (2009-Present): VIX(t+1)"),
+  run_forecast_reg(post_df, "d_vix_lead1 ~ d_repo + vix_wed", "4. Post-GFC (2009-Present): dVIX(t+1)")
 )
 
 write_csv(table5, "output/tables/table5_vix_forecasting_regressions.csv")
@@ -212,7 +211,7 @@ fig4_1 <- ggplot(fig4_data, aes(x = d_repo, y = vix_lead1)) +
   facet_wrap(~ regime, ncol = 2) +
   scale_color_manual(values = c("Pre-GFC (1998-2007)" = "#1f4e78", "Post-GFC (2009-Present)" = "#d95f02")) +
   labs(
-    title = "Replication & Extension of Figure 4.1: Next-Week VIX vs. Weekly Dealer Repo Growth",
+    title = "Next-Week VIX vs. Weekly Dealer Repo Growth",
     subtitle = "Weekly Wednesday Primary Dealer Repo growth (%) vs. VIX(t+1); Source: NY Fed FR 2004 & CBOE",
     x = "Weekly Primary Dealer Repo Growth (%)",
     y = "Next-Week CBOE VIX Level"
@@ -227,29 +226,3 @@ fig4_1 <- ggplot(fig4_data, aes(x = d_repo, y = vix_lead1)) +
 ggsave("output/figures/fig4_1_vix_vs_repo_growth.png", fig4_1, width = 10, height = 5, dpi = 300)
 
 cat("\nSuccess! Saved Table 4, Table 5, and Figure 4.1 to output/.\n")
-panel_weekly <- panel_weekly %>%
-  mutate(
-    across(c(d_repo, d_rev_repo, d_net_repo), ~ ifelse(date %in% as.Date(c("2001-07-04", "2013-04-03")), NA_real_, .x))
-  )
-
-write_csv(panel_weekly, "data/clean/weekly_dealer_vix_panel.csv")
-
-# Re-run Table 4 & Table 5 with clean splice boundaries
-table4 <- bind_rows(
-  calc_summary(panel_weekly %>% filter(regime == "Pre-GFC (1998-2007)"), "Pre-GFC (1998-2007)"),
-  calc_summary(panel_weekly %>% filter(regime == "Post-GFC (2009-Present)"), "Post-GFC (2009-Present)")
-)
-write_csv(table4, "output/tables/table4_weekly_summary_stats.csv")
-print(table4 %>% filter(Variable %in% c("repo_bn", "rev_repo_bn", "d_repo", "d_rev_repo", "vix_wed")))
-
-pre_df  <- panel_weekly %>% filter(regime == "Pre-GFC (1998-2007)")
-post_df <- panel_weekly %>% filter(regime == "Post-GFC (2009-Present)")
-
-table5 <- bind_rows(
-  run_forecast_reg(pre_df,  "vix_lead1 ~ d_repo + vix_wed",   "1. Pre-GFC (1998-2007): VIX(t+1)"),
-  run_forecast_reg(pre_df,  "d_vix_lead1 ~ d_repo + vix_wed", "2. Pre-GFC (1998-2007): dVIX(t+1)"),
-  run_forecast_reg(post_df, "vix_lead1 ~ d_repo + vix_wed",   "3. Post-GFC (2009-Present): VIX(t+1)"),
-  run_forecast_reg(post_df, "d_vix_lead1 ~ d_repo + vix_wed", "4. Post-GFC (2009-Present): dVIX(t+1)")
-)
-write_csv(table5, "output/tables/table5_vix_forecasting_regressions.csv")
-print(table5 %>% filter(Term == "d_repo"))

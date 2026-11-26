@@ -1,0 +1,271 @@
+
+=== 1. EXTRACTION SUMMARY ===
+# A tibble: 5 × 11
+  bank            documents
+  <chr>               <dbl>
+1 Bear Stearns           44
+2 Goldman Sachs          34
+3 Lehman Brothers        52
+4 Merrill Lynch          51
+5 Morgan Stanley         41
+  documents_with_candidates
+                      <dbl>
+1                         0
+2                         0
+3                         9
+4                        28
+5                         8
+  documents_without_candidates
+                         <dbl>
+1                           44
+2                           34
+3                           43
+4                           23
+5                           33
+  total_candidates extraction_pct known_units
+             <dbl>          <dbl>       <dbl>
+1                0            0             0
+2                0            0             0
+3               84           17.3           6
+4              151           54.9          26
+5               30           19.5           8
+  accounting_passed promising ambiguous
+              <dbl>     <dbl>     <dbl>
+1                 0         0         0
+2                 0         0         0
+3                 7         0         6
+4                 1         0        26
+5                 0         0         8
+  verified
+     <dbl>
+1        0
+2        0
+3        0
+4        0
+5        0
+
+=== 2. MONETARY UNIT DETECTION ===
+# A tibble: 3 × 2
+  source_units      n
+  <chr>         <int>
+1 USD millions    214
+2 USD thousands     5
+3 Unknown          46
+
+=== 3. EXTRACTION METHODS ===
+# A tibble: 4 × 3
+  bank            extraction_method     n
+  <chr>           <chr>             <int>
+1 Lehman Brothers HTML table           74
+2 Lehman Brothers Plain text           10
+3 Merrill Lynch   Plain text          151
+4 Morgan Stanley  Plain text           30
+
+=== 4. ACCOUNTING CHECKS ===
+# A tibble: 3 × 2
+  accounting_check              n
+  <chr>                     <int>
+1 Failed                       10
+2 Not independently checked   197
+3 Passed                       58
+
+=== 5. DOCUMENT PROCESSING ERRORS ===
+# A tibble: 0 × 3
+# ℹ 3 variables: bank <chr>, report_date <date>, error <lgl>
+
+=== 6. ALL PROVISIONAL SELECTIONS ===
+# A tibble: 45 × 10
+   bank            report_date
+   <chr>           <date>     
+ 1 Lehman Brothers 1993-12-31 
+ 2 Lehman Brothers 2003-08-31 
+ 3 Lehman Brothers 2004-02-29 
+ 4 Lehman Brothers 2004-08-31 
+ 5 Lehman Brothers 2004-11-30 
+ 6 Lehman Brothers 2005-02-28 
+ 7 Lehman Brothers 2005-05-31 
+ 8 Lehman Brothers 2005-08-31 
+ 9 Lehman Brothers 2005-11-30 
+10 Merrill Lynch   1993-12-31 
+11 Merrill Lynch   1995-09-29 
+12 Merrill Lynch   1995-12-29 
+13 Merrill Lynch   1996-03-29 
+14 Merrill Lynch   1996-06-28 
+15 Merrill Lynch   1996-09-27 
+16 Merrill Lynch   1997-03-28 
+17 Merrill Lynch   1997-06-27 
+18 Merrill Lynch   1997-09-26 
+19 Merrill Lynch   1998-03-27 
+20 Merrill Lynch   1998-06-26 
+21 Merrill Lynch   1998-09-25 
+22 Merrill Lynch   1999-03-26 
+23 Merrill Lynch   1999-06-25 
+24 Merrill Lynch   1999-09-24 
+25 Merrill Lynch   2000-03-31 
+26 Merrill Lynch   2000-06-30 
+27 Merrill Lynch   2000-09-29 
+28 Merrill Lynch   2001-03-30 
+29 Merrill Lynch   2001-06-29 
+30 Merrill Lynch   2001-09-28 
+31 Merrill Lynch   2002-03-29 
+32 Merrill Lynch   2002-08-09 
+33 Merrill Lynch   2002-11-08 
+34 Merrill Lynch   2003-05-08 
+35 Merrill Lynch   2003-08-07 
+36 Merrill Lynch   2003-09-26 
+37 Merrill Lynch   2004-03-26 
+38 Morgan Stanley  1997-08-31 
+39 Morgan Stanley  1997-11-30 
+40 Morgan Stanley  2001-02-28 
+41 Morgan Stanley  2001-05-31 
+42 Morgan Stanley  2001-08-31 
+43 Morgan Stanley  2002-02-28 
+44 Morgan Stanley  2002-05-31 
+45 Morgan Stanley  2002-08-31 
+   raw_total_assets raw_total_liabilities
+              <dbl>                 <dbl>
+ 1            80474                   NA 
+ 2            62724                53782 
+ 3            77723                63947 
+ 4            73399                58978 
+ 5            84530                69610 
+ 6            87615                71861 
+ 7            93051                77173 
+ 8           100073                83739 
+ 9           410063                   NA 
+10        152910362                   NA 
+11           168395                   NA 
+12            86259                   NA 
+13           176733                   NA 
+14           174853                   NA 
+15           185473                   NA 
+16           195884                   NA 
+17           205175                   NA 
+18           207911                   NA 
+19           247603                   NA 
+20           268036                   NA 
+21           293602                   NA 
+22           358896                   NA 
+23           370571                   NA 
+24           353391                   NA 
+25           314620                   NA 
+26           324740                   NA 
+27           314325                   NA 
+28           344992                   NA 
+29           334875                   NA 
+30           361691                   NA 
+31           431604                   NA 
+32           423071                   NA 
+33           448606                   NA 
+34           444871                   NA 
+35           453834                   NA 
+36           452140                   NA 
+37              525                  495.
+38            23858                   NA 
+39            24039                   NA 
+40            26784                   NA 
+41            26374                   NA 
+42            25489                   NA 
+43            26151                   NA 
+44            25652                   NA 
+45            25311                   NA 
+   raw_book_equity source_units  total_assets
+             <dbl> <chr>                <dbl>
+ 1          2052   USD millions        80474 
+ 2          8942   USD millions        62724 
+ 3         13776   USD millions        77723 
+ 4         14421   USD millions        73399 
+ 5         14920   USD millions        84530 
+ 6         15754   Unknown                NA 
+ 7         15878   Unknown                NA 
+ 8         16334   Unknown                NA 
+ 9         16794   USD millions       410063 
+10       5485913   USD thousands      152910.
+11          5705   Unknown                NA 
+12          3818   USD millions        86259 
+13          5704   USD millions       176733 
+14          5883   USD millions       174853 
+15          6077   USD millions       185473 
+16          6364   USD millions       195884 
+17          6514   USD millions       205175 
+18          6618   USD millions       207911 
+19          6925   USD millions       247603 
+20          7268   USD millions       268036 
+21          8012   USD millions       293602 
+22          9209   USD millions       358896 
+23          9897   USD millions       370571 
+24          9779   USD millions       353391 
+25         10692   USD millions       314620 
+26         11446   USD millions       324740 
+27         12276   USD millions       314325 
+28         14733   USD millions       344992 
+29         16014   USD millions       334875 
+30         17171   USD millions       361691 
+31         19939   USD millions       431604 
+32         20691   USD millions       423071 
+33         21090   USD millions       448606 
+34         20906   USD millions       444871 
+35         21592   USD millions       453834 
+36         22299   USD millions       452140 
+37            30.2 Unknown                NA 
+38         23858   USD millions        23858 
+39          4904   USD millions        24039 
+40          5966   USD millions        26784 
+41          6119   USD millions        26374 
+42          5739   USD millions        25489 
+43          6003   USD millions        26151 
+44          6198   USD millions        25652 
+45          6113   USD millions        25311 
+   leverage candidate_score confidence
+      <dbl>           <dbl> <chr>     
+ 1    39.2                5 Ambiguous 
+ 2     7.01              12 Ambiguous 
+ 3     5.64               9 Ambiguous 
+ 4     5.09              12 Ambiguous 
+ 5     5.67               9 Ambiguous 
+ 6     5.56              10 Low       
+ 7     5.86              10 Low       
+ 8     6.13              10 Low       
+ 9    24.4                8 Ambiguous 
+10    27.9                2 Ambiguous 
+11    29.5                3 Low       
+12    22.6                2 Ambiguous 
+13    31.0                5 Ambiguous 
+14    29.7                5 Ambiguous 
+15    30.5                5 Ambiguous 
+16    30.8                5 Ambiguous 
+17    31.5                5 Ambiguous 
+18    31.4                5 Ambiguous 
+19    35.8                5 Ambiguous 
+20    36.9                5 Ambiguous 
+21    36.6                5 Ambiguous 
+22    39.0                5 Ambiguous 
+23    37.4                5 Ambiguous 
+24    36.1                5 Ambiguous 
+25    29.4                5 Ambiguous 
+26    28.4                5 Ambiguous 
+27    25.6                5 Ambiguous 
+28    23.4                5 Ambiguous 
+29    20.9                5 Ambiguous 
+30    21.1                5 Ambiguous 
+31    21.6                5 Ambiguous 
+32    20.4                5 Ambiguous 
+33    21.3                5 Ambiguous 
+34    21.3                5 Ambiguous 
+35    21.0                5 Ambiguous 
+36    20.3                5 Ambiguous 
+37    17.4               10 Low       
+38     1                  5 Ambiguous 
+39     4.90               5 Ambiguous 
+40     4.49               5 Ambiguous 
+41     4.31               5 Ambiguous 
+42     4.44               5 Ambiguous 
+43     4.36               5 Ambiguous 
+44     4.14               5 Ambiguous 
+45     4.14               5 Ambiguous 
+
+=== 7. PILOT PERIOD CANDIDATES ===
+# A tibble: 0 × 9
+# ℹ 9 variables: bank <chr>, report_date <date>, source_reference <chr>, column_number <dbl>, raw_total_assets <dbl>, raw_total_liabilities <dbl>, raw_book_equity <dbl>, source_units <chr>, candidate_score <dbl>
+
+=== 8. PILOT STATEMENT CONTEXT ===

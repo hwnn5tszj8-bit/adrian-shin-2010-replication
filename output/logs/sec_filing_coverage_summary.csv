@@ -1,0 +1,6 @@
+bank,expected_quarters,available_quarters,missing_quarters,coverage_pct
+Bear Stearns,45,43,2,95.56
+Goldman Sachs,36,34,2,94.44
+Lehman Brothers,60,52,8,86.67
+Merrill Lynch,69,47,22,68.12
+Morgan Stanley,44,41,3,93.18

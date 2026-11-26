@@ -1,0 +1,5 @@
+bank,form,report_date,accession_number,source_url,local_file,status,file_size_bytes
+Bear Stearns,10-K,2007-11-30,0000914121-08-000077,https://www.sec.gov/Archives/edgar/data/777001/000091412108000077/be11750956-10k.txt,data/raw/sec_filings/documents/Bear_Stearns/0000914121-08-000077_be11750956-10k.txt,Already downloaded,181265
+Bear Stearns,10-Q,2008-02-29,0000914121-08-000345,https://www.sec.gov/Archives/edgar/data/777001/000091412108000345/be12550652-10q.txt,data/raw/sec_filings/documents/Bear_Stearns/0000914121-08-000345_be12550652-10q.txt,Already downloaded,418271
+Morgan Stanley,10-K,2007-11-30,0001193125-08-013719,https://www.sec.gov/Archives/edgar/data/895421/000119312508013719/d10k.htm,data/raw/sec_filings/documents/Morgan_Stanley/0001193125-08-013719_d10k.htm,Already downloaded,3028703
+Morgan Stanley,10-Q,2008-02-29,0001193125-08-077429,https://www.sec.gov/Archives/edgar/data/895421/000119312508077429/d10q.htm,data/raw/sec_filings/documents/Morgan_Stanley/0001193125-08-077429_d10q.htm,Already downloaded,1471240

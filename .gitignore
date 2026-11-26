@@ -1,0 +1,19 @@
+.RData
+.Rhistory
+.Ruserdata
+.Rproj.user/
+.Renviron
+*_cache/
+# R Markdown HTML support files. Keep the source .R and .Rmd files.
+*_files/
+
+# Downloaded SEC source cache
+/data/raw/sec_submissions/
+/data/raw/sec_filings/documents/
+
+# Saved webpage at the root; the calibration source lives under scripts/.
+/07a_calibrate_balance_sheet_extraction.R
+
+/.Renviron.sh
+
+__pycache__/

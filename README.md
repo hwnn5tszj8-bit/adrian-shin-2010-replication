@@ -35,7 +35,7 @@ Rscript --vanilla scripts/04_five_bank_leverage_analysis.R
 
 The fetch script uses the dated filing manifest in `data/processed/` and reuses local downloads. The extraction audit includes unmatched filings. The earlier SEC inventory and pilot R scripts live under `scripts/sec/legacy/` and are reference workflows. The older candidate CSVs and extraction logs document the preliminary work. The main analysis reads `five_bank_balance_sheets.csv`.
 
-For an optional live FRED refresh, install `quantmod` and `purrr` and run `Rscript --vanilla scripts/01_pull_fred_data.R`. This updates the checked-in market and Financial Accounts snapshots. The NY Fed Primary Dealer extract is a separate input.
+For an optional live FRED refresh, install `purrr` and run `Rscript --vanilla scripts/01_pull_fred_data.R`. This updates the checked-in market and Financial Accounts snapshots. The NY Fed Primary Dealer extract is a separate input.
 
 ## Methods and scope
 

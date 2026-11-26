@@ -3,7 +3,6 @@
 # Paper: Adrian & Shin (2010), "Liquidity and Leverage"
 # ==============================================================================
 
-library(quantmod)
 library(dplyr)
 library(purrr)
 library(readr)
@@ -45,25 +44,30 @@ fred_series <- c(
   "SP500"              # S&P 500 Index (Daily)
 )
 
-# Download all series from FRED
-getSymbols(fred_series, src = "FRED", auto.assign = TRUE)
-
-# Helper function to convert xts object to clean tibble
-xts_to_df <- function(series_name) {
-  obj <- get(series_name)
-  tibble(
-    date = index(obj),
-    value = as.numeric(obj[, 1])
-  ) %>% rename(!!series_name := value)
+# Read one published FRED CSV at a time, with an explicit date and value schema.
+read_fred_series <- function(series) {
+  url <- paste0("https://fred.stlouisfed.org/graph/fredgraph.csv?id=", series)
+  data <- tryCatch(
+    read_csv(url, col_types = cols(observation_date = col_date(), .default = col_double()),
+             na = c("", "NA", ".")),
+    error = function(error) stop("FRED download failed for ", series, ": ", conditionMessage(error))
+  )
+  if (!identical(names(data), c("observation_date", series)) || !any(is.finite(data[[series]]))) {
+    stop("FRED returned an invalid or empty series: ", series)
+  }
+  rename(data, date = observation_date)
 }
+
+fred <- set_names(map(fred_series, read_fred_series), fred_series)
+safe_log <- function(x) log(if_else(is.finite(x) & x > 0, x, NA_real_))
+log_change <- function(x) 100 * (safe_log(x) - lag(safe_log(x)))
 
 # ------------------------------------------------------------------------------
 # 2. Merge Quarterly Balance Sheet Data & Compute Leverage Growth
 # ------------------------------------------------------------------------------
 z1_names <- fred_series[!fred_series %in% c("VIXCLS", "SP500")]
 
-z1_raw <- z1_names %>%
-  map(xts_to_df) %>%
+z1_raw <- fred[z1_names] %>%
   reduce(full_join, by = "date") %>%
   arrange(date)
 
@@ -96,17 +100,17 @@ z1_clean <- z1_raw %>%
   ) %>%
   mutate(
     # Quarterly percentage growth rates: 100 * (log(X_t) - log(X_{t-1}))
-    d_bd_assets = 100 * (log(bd_assets) - log(lag(bd_assets))),
-    d_bd_lev    = 100 * (log(bd_lev)    - log(lag(bd_lev))),
+    d_bd_assets = log_change(bd_assets),
+    d_bd_lev    = log_change(bd_lev),
     
-    d_cb_assets = 100 * (log(cb_assets) - log(lag(cb_assets))),
-    d_cb_lev    = 100 * (log(cb_lev)    - log(lag(cb_lev))),
+    d_cb_assets = log_change(cb_assets),
+    d_cb_lev    = log_change(cb_lev),
     
-    d_hh_assets = 100 * (log(hh_assets) - log(lag(hh_assets))),
-    d_hh_lev    = 100 * (log(hh_lev)    - log(lag(hh_lev))),
+    d_hh_assets = log_change(hh_assets),
+    d_hh_lev    = log_change(hh_lev),
     
-    d_nf_assets = 100 * (log(nf_assets) - log(lag(nf_assets))),
-    d_nf_lev    = 100 * (log(nf_lev)    - log(lag(nf_lev))),
+    d_nf_assets = log_change(nf_assets),
+    d_nf_lev    = log_change(nf_lev),
     
     # Sample indicator: Original Paper (1963-2006) vs. Post-GFC Extension
     sample_period = case_when(
@@ -123,8 +127,8 @@ write_csv(z1_clean, "data/clean/z1_sector_leverage.csv")
 # 3. Merge Daily VIX and S&P 500 Data
 # ------------------------------------------------------------------------------
 market_daily <- full_join(
-  xts_to_df("VIXCLS"),
-  xts_to_df("SP500"),
+  fred[["VIXCLS"]],
+  fred[["SP500"]],
   by = "date"
 ) %>%
   arrange(date) %>%

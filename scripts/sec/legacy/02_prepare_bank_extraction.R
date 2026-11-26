@@ -6,7 +6,6 @@
 library(dplyr)
 library(readr)
 
-setwd("~/GitHub/adrian-shin-2010-replication")
 
 dir.create(
   "data/processed",

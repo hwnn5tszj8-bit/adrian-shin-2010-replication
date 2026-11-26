@@ -7,7 +7,6 @@ library(dplyr)
 library(readr)
 library(tibble)
 
-setwd("~/GitHub/adrian-shin-2010-replication")
 
 pilot <- tribble(
   ~bank, ~report_date, ~total_assets, ~total_liabilities, ~book_equity, ~source_form, ~source_table,

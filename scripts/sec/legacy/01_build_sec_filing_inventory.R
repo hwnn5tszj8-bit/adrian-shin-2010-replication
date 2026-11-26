@@ -4,28 +4,6 @@
 # Script 01: Download SEC Filing Inventory
 # ============================================================
 
-# 1. Install required packages
-# ------------------------------------------------------------
-
-packages <- c(
-  "httr2",
-  "jsonlite",
-  "dplyr",
-  "readr",
-  "stringr",
-  "tibble",
-  "lubridate",
-  "tidyr"
-)
-
-missing_packages <- packages[
-  !packages %in% installed.packages()[, "Package"]
-]
-
-if (length(missing_packages) > 0) {
-  install.packages(missing_packages)
-}
-
 library(httr2)
 library(jsonlite)
 library(dplyr)
@@ -35,17 +13,9 @@ library(tibble)
 library(lubridate)
 library(tidyr)
 
-# 2. Set project working directory
+# SEC contact information
 # ------------------------------------------------------------
 
-setwd("~/GitHub/adrian-shin-2010-replication")
-
-# 3. Load SEC contact information
-# ------------------------------------------------------------
-
-if (file.exists(path.expand("~/.Renviron"))) {
-  readRenviron(path.expand("~/.Renviron"))
-}
 
 sec_user_agent <- Sys.getenv("SEC_USER_AGENT")
 

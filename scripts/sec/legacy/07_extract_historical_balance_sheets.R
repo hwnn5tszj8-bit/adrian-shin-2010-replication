@@ -10,7 +10,6 @@ library(readr)
 library(stringr)
 library(tibble)
 
-setwd("~/GitHub/adrian-shin-2010-replication")
 
 # ------------------------------------------------------------
 # 1. Configuration
@@ -36,6 +35,8 @@ downloads <- read_csv(
     file.exists(local_file)
   ) %>%
   distinct(accession_number, .keep_all = TRUE)
+
+if (nrow(downloads) == 0L) stop("No cached filings found. Download the SEC documents before running extraction.")
 
 cat("Documents available:", nrow(downloads), "\n")
 

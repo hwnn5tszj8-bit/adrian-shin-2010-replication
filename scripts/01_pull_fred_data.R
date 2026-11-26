@@ -4,13 +4,15 @@
 # ==============================================================================
 
 library(quantmod)
-library(tidyverse)
+library(dplyr)
+library(purrr)
+library(readr)
+library(tibble)
 library(lubridate)
 
 # Ensure folders exist
 dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
 dir.create("data/clean", recursive = TRUE, showWarnings = FALSE)
-dir.create("scripts", showWarnings = FALSE)
 dir.create("output/figures", recursive = TRUE, showWarnings = FALSE)
 dir.create("output/tables", recursive = TRUE, showWarnings = FALSE)
 
@@ -110,7 +112,8 @@ z1_clean <- z1_raw %>%
     sample_period = case_when(
       date >= as.Date("1963-01-01") & date <= as.Date("2006-12-31") ~ "Original (1963-2006)",
       date >= as.Date("2009-01-01") ~ "Post-GFC (2009-Present)",
-      TRUE ~ "GFC Crisis (2007-2008)"
+      date >= as.Date("2007-01-01") ~ "GFC Crisis (2007-2008)",
+      TRUE ~ "Before original sample"
     )
   )
 

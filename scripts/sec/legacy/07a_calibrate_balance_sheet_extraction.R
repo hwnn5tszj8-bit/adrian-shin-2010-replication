@@ -10,7 +10,6 @@ library(readr)
 library(stringr)
 library(tibble)
 
-setwd("~/GitHub/adrian-shin-2010-replication")
 
 # ------------------------------------------------------------
 # 1. Load existing pilot download log

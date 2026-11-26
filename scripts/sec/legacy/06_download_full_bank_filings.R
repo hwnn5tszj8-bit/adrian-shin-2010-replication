@@ -12,11 +12,7 @@ library(readr)
 # 1. Project configuration
 # ------------------------------------------------------------
 
-setwd("~/GitHub/adrian-shin-2010-replication")
 
-if (file.exists(path.expand("~/.Renviron"))) {
-  readRenviron(path.expand("~/.Renviron"))
-}
 
 sec_user_agent <- Sys.getenv("SEC_USER_AGENT")
 

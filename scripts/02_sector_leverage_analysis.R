@@ -1,19 +1,15 @@
-# ==============================================================================
-# Script 02: Replicate Figures 2.1-2.4, Figure 3.1 & Post-2008 Structural Break
-# Paper: Adrian & Shin (2010), "Liquidity and Leverage"
-# ==============================================================================
+library(dplyr)
+library(ggplot2)
+library(readr)
+source("scripts/regression.R")
 
-# Install sandwich/lmtest if missing (for Newey-West HAC standard errors)
-packages <- c("tidyverse", "sandwich", "lmtest")
-installed <- packages %in% rownames(installed.packages())
-if (any(!installed)) install.packages(packages[!installed])
-
-library(tidyverse)
-library(sandwich)
-library(lmtest)
+dir.create("output/figures", recursive = TRUE, showWarnings = FALSE)
+dir.create("output/tables", recursive = TRUE, showWarnings = FALSE)
 
 # Load cleaned Z.1 sector data created in Script 01
-z1 <- read_csv("data/clean/z1_sector_leverage.csv", show_col_types = FALSE)
+z1 <- read_csv("data/clean/z1_sector_leverage.csv", show_col_types = FALSE) %>%
+  arrange(date) %>%
+  mutate(quarter = 4L * lubridate::year(date) + lubridate::quarter(date))
 
 # ------------------------------------------------------------------------------
 # 1. Replicate Figures 2.1 - 2.4 (Original Sample: 1963-2006)
@@ -66,7 +62,7 @@ fig2_4_extension <- ggplot(bd_compare, aes(x = d_bd_lev, y = d_bd_assets)) +
   scale_color_manual(values = c("Original (1963-2006)" = "#1f4e78", "Post-GFC (2009-Present)" = "#d95f02")) +
   labs(
     title = "Structural Shift in Broker-Dealer Leverage Procyclicality (Fig. 2.4 Extended)",
-    subtitle = "Post-2008 regulations (Basel III / SLR) dampened procyclical balance sheet expansion",
+    subtitle = "Quarterly percentage log changes; Source: Federal Reserve Financial Accounts",
     x = "Leverage Growth (% Quarterly)",
     y = "Total Asset Growth (% Quarterly)"
   ) +
@@ -80,23 +76,23 @@ fig2_4_extension <- ggplot(bd_compare, aes(x = d_bd_lev, y = d_bd_assets)) +
 ggsave("output/figures/fig2_4_pre_vs_post_gfc.png", fig2_4_extension, width = 10, height = 5, dpi = 300)
 
 # ------------------------------------------------------------------------------
-# 3. Replicate & Extend Figure 3.1: Broker-Dealer Assets as % of BHC Assets
+# 3. Replicate & Extend Figure 3.1: Broker-Dealer Assets as % of Holding Company Assets
 # ------------------------------------------------------------------------------
 fig3_1_data <- z1 %>%
   filter(date >= as.Date("1980-01-01")) %>%
   mutate(bd_to_bhc_pct = 100 * (BOGZ1FL664090005Q / BOGZ1FL734090005Q)) %>%
-  filter(!is.na(bd_to_bhc_pct))
+  filter(is.finite(bd_to_bhc_pct))
 
 fig3_1_plot <- ggplot(fig3_1_data, aes(x = date, y = bd_to_bhc_pct)) +
-  geom_rect(aes(xmin = as.Date("2007-07-01"), xmax = as.Date("2009-06-30"), ymin = -Inf, ymax = Inf),
-            fill = "gray85", alpha = 0.4) +
+  annotate("rect", xmin = as.Date("2007-07-01"), xmax = as.Date("2009-06-30"),
+           ymin = -Inf, ymax = Inf, fill = "gray85", alpha = 0.4) +
   geom_line(color = "#b22222", linewidth = 1.1) +
   geom_hline(yintercept = 100, linetype = "dotted", color = "gray40") +
   labs(
-    title = "Replication & Extension of Figure 3.1: Broker-Dealer Assets (% of BHC Assets)",
+    title = "Broker-Dealer Assets Relative to Holding Company Assets",
     subtitle = "Shaded area marks the 2007–2009 Global Financial Crisis; Source: Federal Reserve Z.1",
     x = "Date",
-    y = "Security Broker-Dealer Assets (% of BHC Assets)"
+    y = "Security Broker-Dealer Assets (% of Holding Company Assets)"
   ) +
   theme_minimal(base_size = 12) +
   theme(plot.title = element_text(face = "bold"))
@@ -104,31 +100,40 @@ fig3_1_plot <- ggplot(fig3_1_data, aes(x = date, y = bd_to_bhc_pct)) +
 ggsave("output/figures/fig3_1_bd_share_extended.png", fig3_1_plot, width = 10, height = 5, dpi = 300)
 
 # ------------------------------------------------------------------------------
-# 4. Regression Table: Leverage Growth on Asset Growth Across Regimes (HAC SEs)
+# 4. Sector regressions and the dealer slope comparison
 # ------------------------------------------------------------------------------
-run_hac_reg <- function(df, formula_str, label) {
-  mod <- lm(as.formula(formula_str), data = df)
-  hac <- coeftest(mod, vcov = NeweyWest(mod, lag = 4, prewhite = FALSE))
-  tibble(
-    Model = label,
-    Term = rownames(hac),
-    Estimate = round(hac[, 1], 3),
-    Std_Error_HAC = round(hac[, 2], 3),
-    t_stat = round(hac[, 3], 2),
-    p_value = round(hac[, 4], 4),
-    R_squared = round(summary(mod)$r.squared, 3),
-    N = nobs(mod)
-  )
-}
+pre <- filter(z1, sample_period == "Original (1963-2006)")
+post <- filter(z1, sample_period == "Post-GFC (2009-Present)")
+periods <- mutate(bd_compare, post = as.integer(sample_period == "Post-GFC (2009-Present)"))
 
 reg_results <- bind_rows(
-  run_hac_reg(z1 %>% filter(sample_period == "Original (1963-2006)"), "d_hh_lev ~ d_hh_assets", "Households (1963-2006)"),
-  run_hac_reg(z1 %>% filter(sample_period == "Original (1963-2006)"), "d_cb_lev ~ d_cb_assets", "Commercial Banks (1963-2006)"),
-  run_hac_reg(z1 %>% filter(sample_period == "Original (1963-2006)"), "d_bd_lev ~ d_bd_assets", "Broker-Dealers (1963-2006)"),
-  run_hac_reg(z1 %>% filter(sample_period == "Post-GFC (2009-Present)"), "d_bd_lev ~ d_bd_assets", "Broker-Dealers (2009-Present)")
+  fit_hac(pre, d_hh_lev ~ d_hh_assets, "Households (1963–2006)", "quarter"),
+  fit_hac(pre, d_nf_lev ~ d_nf_assets, "Nonfinancial firms (1963–2006)", "quarter"),
+  fit_hac(pre, d_cb_lev ~ d_cb_assets, "Commercial banks (1963–2006)", "quarter"),
+  fit_hac(pre, d_bd_lev ~ d_bd_assets, "Broker-dealers (1963–2006)", "quarter"),
+  fit_hac(post, d_bd_lev ~ d_bd_assets, "Broker-dealers (2009–latest)", "quarter"),
+  fit_hac(periods, d_bd_lev ~ d_bd_assets * post, "Broker-dealer slope comparison", "quarter")
 )
-
 write_csv(reg_results, "output/tables/sector_leverage_regressions.csv")
-print(reg_results)
 
-cat("\nSuccess! Saved 3 high-res charts in output/figures/ and regression table in output/tables/.\n")
+# Table 3-style dynamic model for the aggregate dealer sector. The October 2006
+# and January 2009 split uses the same sample flags as the scatterplots.
+dynamic <- z1 %>%
+  mutate(
+    lag_log_leverage = if_else(quarter - lag(quarter) == 1L & lag(bd_lev) > 0,
+                              log(if_else(lag(bd_lev) > 0, lag(bd_lev), NA_real_)),
+                              NA_real_),
+    leverage_growth = d_bd_lev / 100,
+    asset_growth = d_bd_assets / 100,
+    post = as.integer(sample_period == "Post-GFC (2009-Present)")
+  ) %>%
+  filter(sample_period %in% unique(bd_compare$sample_period))
+dynamic_results <- bind_rows(
+  fit_hac(filter(dynamic, post == 0L), leverage_growth ~ lag_log_leverage + asset_growth,
+          "Dealer sector dynamic model (1963–2006)", "quarter"),
+  fit_hac(filter(dynamic, post == 1L), leverage_growth ~ lag_log_leverage + asset_growth,
+          "Dealer sector dynamic model (2009–latest)", "quarter"),
+  fit_hac(dynamic, leverage_growth ~ (lag_log_leverage + asset_growth) * post,
+          "Dealer sector dynamic slope comparison", "quarter")
+)
+write_csv(dynamic_results, "output/tables/sector_dynamic_leverage_regressions.csv")

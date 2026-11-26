@@ -7,13 +7,9 @@ library(httr2)
 library(dplyr)
 library(readr)
 
-setwd("~/GitHub/adrian-shin-2010-replication")
 
 # 1. Load SEC configuration
 
-if (file.exists(path.expand("~/.Renviron"))) {
-  readRenviron(path.expand("~/.Renviron"))
-}
 
 sec_user_agent <- Sys.getenv("SEC_USER_AGENT")
 
